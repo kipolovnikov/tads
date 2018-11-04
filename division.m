@@ -19,7 +19,7 @@ function num = division(b, x, y)
 
     % determining an optimal division $s$ and position of the boundary $num$
     % according to the principal eigenvector
-    [num, s] = best_division(v(:, n));
+    [num, s] = linear_splitting(v(:, n));
 
     % only if modularity difference is large enough, we adopt the splitting
     if s'*b1*s < eps || num < 2 || num > n-2 
