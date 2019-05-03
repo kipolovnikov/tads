@@ -1,9 +1,9 @@
 function [numc, lbord, rbord] = spectral_modularity(m, g)       
 
 % spectral modularity algorithm run on a sparse matrix
-% with a cutoff for the minimal cluster size (l > 3)
+% with a cutoff for the minimal cluster size (l >= lenmin)
 
-    % minimal length of TAD
+    % minimal length of TAD; set to 2 for 20kb resolution and to 4 for 10kb resolution
     lenmin = 2;
     
     n = length(m);
